@@ -1,27 +1,25 @@
 # Beyond Pattern Matching
 ## A Weighted Entropy Analysis of Functional Specialization in the Llama-2 Architecture
 
-**Attention Entropy Analysis in Llama-2 variants**
-
-This repository contains the experimental framework and results for a Master's thesis investigating attention entropy patterns in large language models, with focus on developing a novel methodology to analyze attention sink phenomena and its impact on reasoning capabilities.
+This repository contains the complete experimental framework and results for a Master's thesis investigating functional specialization in Large Language Models. The central finding, that LLMs develop distinct processing pathways for different cognitive tasks, is revealed using a novel weighted entropy methodology designed to accurately measure attention patterns by accounting for attention sink phenomena.
 
 ## Research Overview
 
-The study develops a weighted entropy methodology to address attention sink phenomena in transformer models, providing more accurate measurements of attention distribution patterns compared to standard entropy analysis. The research systematically evaluates four major LLM architectures (Llama-2 70B Base/Chat, CodeLlama 70B Base/Instruct) across two reasoning domains: linguistic tasks (sensible vs. nonsensical sentences) and mathematical tasks (easy vs. hard arithmetic problems).
+This study investigates how LLMs adapt their internal processing strategies when faced with different cognitive demands. Using a custom-built weighted entropy metric to correct for attention sinks, the thesis analyzes four 70-billion-parameter Llama-2 variants on two distinct tasks: formal reasoning (mathematics) and functional competence (linguistics). The core finding is that models do not use a single, general-purpose system for problem-solving. Instead, they exhibit a clear "division of labor," developing highly specialized processing pathways for each cognitive domain.
 
 ## Key Contributions
-
-- Novel weighted entropy approach that accounts for attention sinks in transformer attention analysis
-- Comprehensive evaluation across multiple model architectures and reasoning domains
-- Statistical analysis demonstrating systematic differences in attention patterns between reasoning tasks
-- Complete experimental pipeline with reproducible methodology for attention entropy analysis
+This thesis makes two primary contributions: one methodological and one scientific.
+- Methodological: Introduces a novel weighted entropy approach that provides a more accurate analysis of attention patterns by accounting for the confounding effects of attention sinks.
+- Scientific: Provides strong quantitative evidence for functional specialization in LLMs, showing that models recruit distinct, non-overlapping mechanisms for linguistic vs. mathematical reasoning.
+- Theoretical: Challenges a simplistic view of LLMs as monolithic systems, supporting a more nuanced model of emergent modularity where specialized processing patterns develop for different tasks.
+- Practical: Offers a complete and reproducible experimental pipeline for analyzing attention entropy in transformer models, from data generation to final analysis.
 
 ## Repository Structure
 
-- `datasets/`: Linguistic and mathematical reasoning task datasets
-- `entropy_llama_snellius.ipynb`: Pipeline for model initialization on HPC service
-- `entropy_llama_truncated.ipynb`: Results analysis and visualization
-- `entropy_results_*/`: Computed attention metrics for each model-task combination
+- `datasets/`: Contains the linguistic (sensible/nonsensical) and mathematical (easy/hard) reasoning task datasets used in the study.
+- `entropy_llama_snellius.ipynb`: The Jupyter Notebook pipeline for model initialization, data generation, and metric calculation on an HPC service.
+- `entropy_llama_truncated.ipynb`: The Jupyter Notebook used for the final statistical analysis, data visualization, and generation of all figures and tables in the thesis.
+- `entropy_results_*/`: A directory containing the computed NumPy arrays for weighted entropy, standard entropy, and sink strengths for each model-task combination.
 
 
 **Author**: Rens Roelen  
