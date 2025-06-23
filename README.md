@@ -1,4 +1,5 @@
-# ReasoningLLM Master Thesis
+# Beyond Pattern Matching
+## A Weighted Entropy Analysis of Functional Specialization in the Llama-2 Architecture
 
 **Attention Entropy Analysis in Llama-2 variants**
 
